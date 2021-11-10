@@ -1,11 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Blog</title>
-</head>
-<body>
-    {% for blog in blog_posts %}
-    <p><a href="/blog/{{ blog.id }}">{{ blog.title }}</a></p>
+{% extends "blog/base.html" %}
+{% block content %}
+    {% for post in posts %}
+    <article class="media content-section">
+        <div class="media-body">
+          <div class="article-metadata">
+            <a class="mr-2" href="#">{{ post.author }}</a>
+            <small class="text-muted">{{ post.date|date:"F d, Y" }}</small>
+          </div>
+          <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+          <p class="article-content">{{ post.body }}</p>
+        </div>
+      </article>
     {% endfor %}
-</body>
-</html>
+{% endblock content%}
+
