@@ -7,6 +7,7 @@ on:
       - main
       - develop
       - staging
+
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -24,7 +25,10 @@ jobs:
     - name: Run Linter
       run: |
         black --check .
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8e6e5aab4da9c69528c7afe551bf639bcf8f6958
   test:
     runs-on: ubuntu-latest
 
@@ -41,4 +45,8 @@ jobs:
     - name: Run Tests
       run: |
         cd myblog
+<<<<<<< HEAD
         python manage.py test
+=======
+        python manage.py test
+>>>>>>> 8e6e5aab4da9c69528c7afe551bf639bcf8f6958
