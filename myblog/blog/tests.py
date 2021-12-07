@@ -28,5 +28,5 @@ class AdminTest(TestCase):
         )
         self.assertEqual(response.status_code, 302)
 
-        response = self.client.get('/')
-        self.assertTrue('TEST TITLE' in str(response.content))
+        response = self.client.get("/")
+        self.assertTrue("TEST TITLE" in str(response.content))
