@@ -13,7 +13,6 @@ from blog.views import (
 from blog.models import Blog
 import datetime
 import pytz
-from users.forms import UserRegisterForm
 
 
 class AdminTest(TestCase):
