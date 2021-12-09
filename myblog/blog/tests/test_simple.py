@@ -91,21 +91,21 @@ class TestViews(TestCase):
             author=self.user,
         )
 
-    def test_blog_home_GET(self):
+    def test_blog_home_get(self):
 
         response = self.client.get(self.home_url)
 
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, "blog/home.html")
 
-    def test_blog_about_GET(self):
+    def test_blog_about_get(self):
 
         response = self.client.get(reverse("about"))
 
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, "blog/about.html")
 
-    def test_user_post_list_view_GET(self):
+    def test_user_post_list_view_get(self):
 
         response = self.client.get(self.post_list_url)
 
