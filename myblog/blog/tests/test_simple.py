@@ -87,7 +87,9 @@ class TestViews(TestCase):
         self.post1 = Blog.objects.create(
             title="SOME TITLE",
             body="SOME TEXT",
-            date=datetime.datetime(2021, 12, 7, 20, 8, 7, 127325, tzinfo=pytz.UTC),
+            date=datetime.datetime(
+                2021, 12, 7, 20, 8, 7, 127325, tzinfo=pytz.UTC
+            ),
             author=self.user,
         )
 

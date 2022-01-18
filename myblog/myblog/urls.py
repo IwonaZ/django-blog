@@ -36,7 +36,9 @@ urlpatterns = [
     ),
     path(
         "password-reset/",
-        auth_views.PasswordResetView.as_view(template_name="users/password_reset.html"),
+        auth_views.PasswordResetView.as_view(
+            template_name="users/password_reset.html"
+        ),
         name="password_reset",
     ),
     path(
@@ -64,4 +66,6 @@ urlpatterns = [
 ]
 
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(
+        settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
+    )

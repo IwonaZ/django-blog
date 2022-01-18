@@ -19,7 +19,9 @@ class SeleniumTest(StaticLiveServerTestCase):
         else:
             from chromedriver_binary import chromedriver_filename
 
-            self.driver = webdriver.Chrome(chromedriver_filename, options=options)
+            self.driver = webdriver.Chrome(
+                chromedriver_filename, options=options
+            )
         self.user = User.objects.create_superuser(
             username="testuser", password="password"
         )

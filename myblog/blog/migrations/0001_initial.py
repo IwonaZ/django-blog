@@ -29,7 +29,10 @@ class Migration(migrations.Migration):
                 ),
                 ("title", models.CharField(max_length=150)),
                 ("body", models.TextField()),
-                ("date", models.DateTimeField(default=django.utils.timezone.now)),
+                (
+                    "date",
+                    models.DateTimeField(default=django.utils.timezone.now),
+                ),
                 (
                     "author",
                     models.ForeignKey(
